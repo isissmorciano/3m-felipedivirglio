@@ -20,14 +20,14 @@ def verifica_tentetativo(tentetativo: int, numero_segreto: int) -> bool:
         print("Troppo alto!")
         return False
     else:
-        print("Hai indovinato!")
+        print("\nHai indovinato!")
         return True
 
 def aggiorna_contatore(tentativi: int) -> int:
     return tentativi + 1
 
 def stampa_fine(tentativi: int):
-    print(f"Hai indovinato il numero in {tentativi} tentativi!")
+    print(f"\nHai indovinato il numero in {tentativi} tentativi!\n")
 
 def main():
     numero_segreto = genera_numeri()

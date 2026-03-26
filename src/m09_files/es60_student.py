@@ -16,7 +16,7 @@ def load_studenti(path=NOME_FILE):
         return []
 
 
-def aggiungi_studente(path=NOME_FILE) -> tuble[bool, str, dict | None]:
+def aggiungi_studente(path=NOME_FILE) -> list[bool, str, dict | None]:
     try:
         with open(path, "r", encoding="utf-8") as f:
             studenti = json.load(f)
@@ -50,7 +50,7 @@ def aggiungi_studente(path=NOME_FILE) -> tuble[bool, str, dict | None]:
     print(f"Aggiunto: {nome} con voto {voto}")
 
 
-def salva_studenti(path=NOME_FILE):
+def salva_studenti(studenti, path=NOME_FILE):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(studenti, f, ensure_ascii=False, indent=4)
 
@@ -62,7 +62,7 @@ def visualizza_lista(studenti):
         s = studenti[i]
         print(f"{i}. {s['nome']} - Voto: {s['voto']}")
 
-def mostra_dettagli(studenti, indice) -> tuble[bool, str, dict | None]:
+def mostra_dettagli(studenti, indice) -> list[bool, str, dict | None]:
     if indice < 0 or indice >= len(studenti):
         print("Indice non valido.")
         return
@@ -170,13 +170,13 @@ def filtra_per_voto(studenti):
     for s in risultati:
         print(f"  {s['nome']} - Voto: {s['voto']}")
 
-def statistiche(studenti):
+def statistiche(studenti: list[dict]) -> list[bool, str, dict | None]:
     numero_studenti = print(f"Numero di studenti: {len(studenti)}")
     voto_max = max(studenti(voto_max))
     voto_min = min(studenti(voto_min))
     
-    print(f"nome: {studenti(nome)}, voto: {max(studenti(voto))}") 
-    print(f"nome: {studenti(nome)}, voto: {min(studenti(voto))}")
+    print(f"nome: {studenti('nome')}, voto: {max(studenti('voto'))}") 
+    print(f"nome: {studenti('nome')}, voto: {min(studenti('voto'))}")
 
 
 
