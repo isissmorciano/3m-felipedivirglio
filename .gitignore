@@ -1,3 +1,7 @@
+temp/
 .ruff_cache/
 _hidden/
 *.pyc
+**/v5/*
+**/diario/
+**/es66_reference.py
