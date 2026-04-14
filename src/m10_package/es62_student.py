@@ -1,9 +1,9 @@
 from coordinate_student import punti_student, linee_student
 
 def main():
-    punto_a = punti_student.crea_punto('x', 'y')
-    punto_b = punti_student.crea_punto('x', 'y')
-    punto_c = punti_student.crea_punto('x', 'y')
+    punto_a = punti_student.crea_punto(2, 5)
+    punto_b = punti_student.crea_punto(7, 9)
+    punto_c = punti_student.crea_punto(1, 2)
 
     print("=== Coordinate e Linee ===\n")
     print("punti: ")
