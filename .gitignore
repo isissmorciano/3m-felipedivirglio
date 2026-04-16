@@ -1,4 +1,10 @@
+.venv/
+temp/
 .ruff_cache/
 _hidden/
 *.pyc
-**/*student.py
+**/v5/*
+**/diario/
+**/es66_reference.py
+**/es67_reference.py
+**/es68_reference.py
